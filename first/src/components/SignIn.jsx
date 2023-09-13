@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
 function SignIn({ onSignIn }) {
   const [formData, setFormData] = useState({
     email: '',
     password: '',
+
   });
 
   const handleInputChange = (e) => {
@@ -56,9 +58,10 @@ function SignIn({ onSignIn }) {
             required
           />
         </div>
+        <Link  to="/Movies">
         <button type="submit" className="btn btn-primary">
           Sign In
-        </button>
+        </button> </Link>
       </form>
     </div>
   );

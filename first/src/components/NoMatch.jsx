@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function NotFound() {
+function NoMatch() {
   return (
     <div className="text-center mt-5">
       <h2>404 - Not Found</h2>
@@ -13,4 +13,4 @@ function NotFound() {
   );
 }
 
-export default NotFound;
+export default NoMatch;

@@ -1,0 +1,43 @@
+#NavBar {
+  background-image: url(https://s3-alpha-sig.figma.com/img/154e/382f/b7e8be84d7248b8b9812172cad1cd0c9?Expires=1695600000&Signature=OsNLaMa8CnSNnQeUuaSqQc4ItYP-nbUj0fcZVpScVICd8NzZdIEz80MJBNhEju2IQOUMxTFuDw4FavRj8rGqkBK6uLeq0vJG~Y-EPhP~LInckDsnzuQ5Y2BdrMTWOqkPaFdDAPmQXSLpWteihqFaB2f2VQGC6Za5gHu7t3hq62C0X21qB-8H7osPvHdFmh0c-B881mmDx6JQCfpUQRzNHAjMxdvS~LrFQthLfxQb29n8J4z25KNx4cSOzRDCMXJaP0gpPcPRXMYrFdz-nbt~yFJLM37b1YLKasT2gd5K2x6nxGQWVPlwAafWCDzo3TzVihPSl0FiwjfkbBREka5jUQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4) !important;
+  background-Size: 'cover';
+  background-Repeat: 'no-repeat';
+  background-Position: 'center';
+  min-Height: '100vh';
+
+
+}
+#Moviebox{
+  color: aliceblue !important;
+}
+/* Custom CSS class */
+#input1{
+  color: white !important;
+  background:inherit;
+  font-size: 16px;
+  font-family: DM Sans; 
+  font-weight: 400; line-height: 24px; word-wrap: break-word
+}
+#MovieCard{
+  /* width: 300px !important; */
+}
+#SideBar{
+  border: 2px solid rgb(250, 116, 116);
+}
+#Control{
+  border: 2px solid rgb(250, 116, 116);
+}
+#a{
+  text-decoration: none;
+  color: red !important;
+}
+#a2{
+  text-decoration: none;
+  color: red !important;
+  font-size: 12px;
+}
+#bottomImage{
+  margin-left: 90vh;
+}
+
+

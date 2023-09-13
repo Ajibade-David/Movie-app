@@ -1,15 +1,11 @@
 import React, { useState } from 'react';
 import { Routes, Route, useNavigate } from 'react-router-dom';
-import Layout from './components/Layout';
-import MovieSearch from './components/MovieSearch';
-import MovieDetails from './components/MovieDetails';
-import Favorites from './components/Favorites';
 import SignIn from './components/SignIn';
 import SignUp from './components/SignUp';
-import NavigationMenu from './components/NavigationMenu';
+import NavigationMenu from './components/NavigationMenu'; // Import the NavigationMenu component
 import 'bootstrap/dist/css/bootstrap.min.css';
-import NoMatch from "./components/NoMatch";
-// import './styles.css';
+import NoMatch from './components/NoMatch';
+import Movies from './components/Movies';
 
 function App() {
   const [user, setUser] = useState(null);
@@ -18,83 +14,29 @@ function App() {
   // Function to simulate user login (replace with real authentication)
   const handleSignIn = (userData) => {
     setUser(userData);
-    navigate('/');
+    navigate('/SignIn');
   };
 
   // Function to simulate user registration (replace with real authentication)
   const handleSignUp = (userData) => {
     setUser(userData);
-    navigate('/');
+    navigate('/SignUp');
   };
-  
+
   // Function to simulate user logout (replace with real authentication)
   const handleSignOut = () => {
     setUser(null);
-    navigate('/');
+    navigate('/SignOut');
   };
 
   return (
-    <div className="container">
-      <header>
-        <NavigationMenu user={user} onSignOut={handleSignOut} />
-      </header>
-      <main>
-        <Routes>
-          
-        <Route path='*' element={<NoMatch/>}/>
-          <Route
-            path="/"
-            element={ <Layout user={user}>
-            <MovieSearch user={user} />
-          </Layout>
-            }
-          />
-          <Route
-            path="/search/*"
-            element={
-              <Layout user={user}>
-                <MovieSearch user={user} />
-              </Layout>
-            }
-          />
-          <Route
-            path="/movies/:id"
-            element={
-              <Layout user={user}>
-                <MovieDetails user={user} />
-              </Layout>
-            }
-          />
-          <Route
-            path="/favorites"
-            element={
-              <Layout user={user}>
-                <Favorites user={user} />
-              </Layout>
-            }
-          />
-          <Route
-            path="/signin"
-            element={
-              <Layout user={user}>
-                <SignIn onSignIn={handleSignIn} />
-              </Layout>
-            }
-          />
-          <Route
-            path="/signup"
-            element={
-              <Layout user={user}>
-                <SignUp onSignUp={handleSignUp} />
-              </Layout>
-            }
-          />
-        </Routes>
-      </main>
-      <footer className="text-center mt-4">
-        <p>&copy; {new Date().getFullYear()} Movie App</p>
-      </footer>
-    </div>
+    <Routes>
+    <Route path='/' element={<NavigationMenu  />}/>
+    <Route path='/SignUp' element={<SignUp/>}/>
+     <Route path='SignIn' element={<SignIn/>}/>
+     <Route path='Movies' element={<Movies/>}/>
+      <Route path='*' element={<NoMatch/>}/>
+    </Routes>
   );
 }
 
