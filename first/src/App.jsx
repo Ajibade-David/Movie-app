@@ -6,7 +6,6 @@ import NavigationMenu from './components/NavigationMenu'; // Import the Navigati
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NoMatch from './components/NoMatch';
 import Movies from './components/Movies';
-import MovieSearch from './components/MovieSearch';
 
 function App() {
   const [user, setUser] = useState(null);
@@ -37,7 +36,6 @@ function App() {
      <Route path='SignIn' element={<SignIn/>}/>
      <Route path='Movies' element={<Movies/>}/>
       <Route path='*' element={<NoMatch/>}/>
-      <Route path='MovieSearch' element={<MovieSearch/>}/>
       <Route path='NavigationMenu' element={<NavigationMenu/>}/>
     </Routes>
   );

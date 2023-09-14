@@ -135,7 +135,7 @@ function NavigationMenu({ user, onSignOut }) {
                   onChange={(e) => setSearchTerm(e.target.value)}
                 />
                 <span className="input-group-text" id={styles.searchIcon} >
-                  <Link to='/MovieSearch'>
+                  <Link to='/NavigationMenu'>
                   <BsSearch id={styles.searchIcon} /> {/* Search icon */}
                   </Link>
                 </span>
