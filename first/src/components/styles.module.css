@@ -38,7 +38,7 @@
   font-size: 12px;
 }
 #bottomImage{
-  margin-left: 90vh;
+  /* margin-left: 90vh; */
 }
 
 #searchIcon {
@@ -54,6 +54,15 @@
   font-size: 30px !important;
   color: rgb(121, 121, 121) !important;
  }
+ #nava3{
+  font-size: 30px !important;
+  color: rgb(0, 0, 0) !important;
+  border: 2px solid rgb(245, 204, 213);
+ }
+ #nava4{
+  font-size: 20px !important;
+  color: rgb(0, 0, 0) !important;
+ }
  #nava2{
   font-size: 30px !important;
   color: rgb(255, 0, 64) !important;
@@ -62,6 +71,18 @@
  #nava2icon{
   font-size: 30px !important;
   background-color: rgb(248, 231, 235) !important;
+ }
+ #SeeShowtimes{
+  margin-left: -20vh;
+  margin-top: -5vh;
+ }
+ #StartPlaying{
+  background-color: rgb(248, 231, 235) !important;
+ }
+ #StartPlayingText{
+  color: rgb(255, 8, 70) !important;
+  font-weight: 500;
+  
  }
 
 

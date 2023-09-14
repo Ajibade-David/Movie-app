@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from "./styles.module.css";
+import { Link, useNavigate } from 'react-router-dom';
 
 function Movies() {
   return (
@@ -35,7 +36,7 @@ function Movies() {
               <li className="nav-item mt-5"id={styles.nava2icon}>
                     <span style={{ display: 'inline' }}>
                       <i className="bi bi-camera-reels" style={{ display: 'inline' }}></i>
-                    <a className="nav-link active" href="#" id={styles.nava2} style={{ display: 'inline' }}>
+                    <a className="nav-link active " href="#" id={styles.nava2} style={{ display: 'inline' }}>
                       Movies
                     </a>
                   </span>
@@ -43,7 +44,7 @@ function Movies() {
               {/* TV Series Link */}
               <li className="nav-item mt-5">
                     <span style={{ display: 'inline' }}>
-                      <i className="bi bi-play-btn" style={{ display: 'inline' }}></i>
+                      <i className="bi bi-tv" style={{ display: 'inline' }}></i>
                     <a className="nav-link active" href="#" id={styles.nava} style={{ display: 'inline' }}>
                       Tv Search
                     </a>
@@ -51,10 +52,29 @@ function Movies() {
                 </li>
               {/* Upcoming Link */}
               <li className="nav-item mt-5">
-                <a className="nav-link " href="#" id={styles.nava}>
-                  Upcoming
-                </a>
-              </li>
+                    <span style={{ display: 'inline' }}>
+                      <i className="bi bi-calendar3" style={{ display: 'inline' }}></i>
+                    <a className="nav-link active" href="#" id={styles.nava} style={{ display: 'inline' }}>
+                      Upcoming
+                    </a>
+                  </span>
+                </li>
+                <div className='mt-5'>
+                <li className="nav-item mt-5">
+                    <a className="nav-link active" href="#" id={styles.nava3}> Play movie quizes <br/> and earn <br />free tickets
+                    <p id={styles.nava4}>50k people are playing <br />now</p>
+                    <button className='btn btn-outline-danger rounded pill' id={styles.StartPlaying}> <p id={styles.StartPlayingText} >Start Playing</p></button>
+                    </a>
+                </li>
+                <li className="nav-item mt-5">
+                    <span style={{ display: 'inline' }}>
+                      <i className="bi bi bi-box-arrow-right" style={{ display: 'inline' }}></i>
+                    <Link className="nav-link active" to='/NavigationMenu' id={styles.nava} style={{ display: 'inline' }}>
+                      Log Out
+                    </Link>
+                  </span>
+                </li>
+                </div>
             </ul>
           </div>
         </nav>
@@ -77,9 +97,15 @@ function Movies() {
             <p >After thirty years, Maverick is still pushing the envelope as a top naval aviator, <span><button className='btn btn-danger ms-2'>See Showtimes</button></span> <br />
               but must confront ghosts of his past when he leads TOP GUN's elite graduates <br />
               on a mission that demands the ultimate sacrifice from those chosen to fly it
-              {/* <span><button className='btn btn-outline-danger ms-4'>See Showtimes</button></span> */}
             </p>
           </div>
+          <div className="container-fluid" id={styles.SeeShowtimes}>
+      <div className="row justify-content-end">
+        <div className="col-auto">
+          <button className="btn btn-outline-danger">See Showtimes</button>
+        </div>
+      </div>
+    </div>
           <div>
             <p>Director: <a href="" className='text-danger' id={styles.a}>Joseph Kosinki</a></p>
           </div>
@@ -90,32 +116,35 @@ function Movies() {
             <span>
               <p>Stars: <a href="" id={styles.a}>Tom Cruise, Jennifer Connelly, Miles Teller</a></p>
             </span>
-            <div className="mt-5 d-flex align-items-center">
-              <button className="btn btn-danger mr-2">Top Rated movie #65</button>
-              <div className="form-group mb-0">
-                <select
-                  className="custom-select custom-select-sm"
-                  id="nomination"
-                  name="nomination"
-                  style={{ width: '300px', height: '40px' }}
-                >
-                  <option value="Awards" selected>Awards</option>
-                  <option value="Nomination 1">Nomination 1</option>
-                  <option value="Nomination 2">Nomination 2</option>
-                  <option value="Nomination 3">Nomination 3</option>
-                  <option value="Nomination 4">Nomination 4</option>
-                  <option value="Nomination 5">Nomination 5</option>
-                  <option value="Nomination 6">Nomination 6</option>
-                  <option value="Nomination 7">Nomination 7</option>
-                  <option value="Nomination 8">Nomination 8</option>
-                  <option value="Nomination 9">Nomination 9</option>
-                </select>
-              </div>
-            </div>
+            <div className="d-flex align-items-center mt-0  ">
+  <button className="btn btn-danger mr-2">Top Rated movie #65</button>
+  <div className="form-group mb-0">
+    <select
+      className="custom-select custom-select-sm"
+      id="nomination"
+      name="nomination"
+      style={{ width: '300px', height: '40px' }}
+    >
+      <option value="Awards" selected>Awards</option>
+      <option value="Nomination 1">Nomination 1</option>
+      <option value="Nomination 2">Nomination 2</option>
+      <option value="Nomination 3">Nomination 3</option>
+      <option value="Nomination 4">Nomination 4</option>
+      <option value="Nomination 5">Nomination 5</option>
+      <option value="Nomination 6">Nomination 6</option>
+      <option value="Nomination 7">Nomination 7</option>
+      <option value="Nomination 8">Nomination 8</option>
+      <option value="Nomination 9">Nomination 9</option>
+    </select>
+  </div>
+  <img
+    className="img-fluid"
+    style={{ maxWidth: "360px", borderRadius: "2px", marginLeft: "490px" }}
+    src="https://s3-alpha-sig.figma.com/img/4e62/bce8/116ee4b17ae77fa058f95de8e6b7cf2e?Expires=1695600000&Signature=dQsNOeRD1j3qqqMLmsPABCIzAL5t9OUF7SKgQqjl2pK0laQqLUd4EdYgFuZO4PVWndKU3NWiVFdOOOY0pv0kSeUmKg5YL4yHUBoNzzNpAAPxQr9iUcL4-wXIs~S4KMPo8tEh01lFKjFgWJK723s73ZUGXRZi5Nu4N5AGBaEOU5e7Emo9bZhHzpTTrFK4u4Bm6coshFnd4mIueHVa-ZuVpuUhAK3Cz5UpaAUd~0-mIKLNas8lDhtHfunaPHr~Sxnt3~o78td-JD158DbuIQl32klJ29c5kTGuZszoAj22wcGYhbUHshb~iqlbTQNOXE77QsGFF-rVMdeqLdEZrcGwEw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+    alt="Bottom Image"
+  />
+</div>
 
-            {/* <span>
-              <img id={styles.bottomImage} className='img-fluid w-25 mb-2' style={{ width: 360, borderRadius: 2 }} src="https://s3-alpha-sig.figma.com/img/4e62/bce8/116ee4b17ae77fa058f95de8e6b7cf2e?Expires=1695600000&Signature=dQsNOeRD1j3qqqMLmsPABCIzAL5t9OUF7SKgQqjl2pK0laQqLUd4EdYgFuZO4PVWndKU3NWiVFdOOOY0pv0kSeUmKg5YL4yHUBoNzzNpAAPxQr9iUcL4-wXIs~S4KMPo8tEh01lFKjFgWJK723s73ZUGXRZi5Nu4N5AGBaEOU5e7Emo9bZhHzpTTrFK4u4Bm6coshFnd4mIueHVa-ZuVpuUhAK3Cz5UpaAUd~0-mIKLNas8lDhtHfunaPHr~Sxnt3~o78td-JD158DbuIQl32klJ29c5kTGuZszoAj22wcGYhbUHshb~iqlbTQNOXE77QsGFF-rVMdeqLdEZrcGwEw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="Bottom Image" />
-            </span> */}
           </div>
         </main>
       </div>
