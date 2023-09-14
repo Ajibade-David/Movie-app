@@ -63,7 +63,7 @@ function SignUp({ onSignUp }) {
           </label>
           <input
             type="password"
-            className="form-control"
+            className="form-control"  
             id="password"
             name="password"
             value={formData.password}

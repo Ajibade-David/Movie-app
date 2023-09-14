@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, } from 'react-router-dom';
 
-function SignIn({ onSignIn }) {
+function SignIn() {
+  const navigate = useNavigate();
+
   const [formData, setFormData] = useState({
     email: '',
     password: '',
-
   });
 
   const handleInputChange = (e) => {
@@ -23,7 +24,7 @@ function SignIn({ onSignIn }) {
       name: 'John Doe',
       email: formData.email,
     };
-    onSignIn(userData);
+    navigate('/Movies'); // Redirect to the Movies page after sign-in
   };
 
   return (
@@ -58,11 +59,13 @@ function SignIn({ onSignIn }) {
             required
           />
         </div>
-        <Link  to="/Movies">
         <button type="submit" className="btn btn-primary">
           Sign In
-        </button> </Link>
+        </button>
       </form>
+      <p>
+        Don't have an account? <Link to="/SignUp">Sign Up</Link>
+      </p>
     </div>
   );
 }

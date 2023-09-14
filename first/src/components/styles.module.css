@@ -14,7 +14,7 @@
 #input1{
   color: white !important;
   background:inherit;
-  font-size: 16px;
+  font-size: 20px;
   font-family: DM Sans; 
   font-weight: 400; line-height: 24px; word-wrap: break-word
 }
@@ -30,6 +30,7 @@
 #a{
   text-decoration: none;
   color: red !important;
+  font-size: 20px !important;
 }
 #a2{
   text-decoration: none;
@@ -39,5 +40,28 @@
 #bottomImage{
   margin-left: 90vh;
 }
+
+#searchIcon {
+  color: rgb(255, 255, 255) !important; /* Icon color */
+  font-weight: 400 !important;
+  background-color: inherit !important;
+  border: none;
+}
+#menuIcon {
+  color: rgb(241, 17, 88) !important; /* Icon color */
+ }
+ #nava{
+  font-size: 30px !important;
+  color: rgb(121, 121, 121) !important;
+ }
+ #nava2{
+  font-size: 30px !important;
+  color: rgb(255, 0, 64) !important;
+  /* background-color: rgb(248, 231, 235) !important; */
+ }
+ #nava2icon{
+  font-size: 30px !important;
+  background-color: rgb(248, 231, 235) !important;
+ }
 
 
